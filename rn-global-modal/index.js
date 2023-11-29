@@ -89,7 +89,7 @@ var _PopContainer = function (_React$Component) {
                 { style: _styles.container },
                 _react2['default'].createElement(
                     _Modal2['default'],
-                    { style: [_styles.modalContainer, this.props.style], animateAppear: true, onAnimationEnd: this.props.onAnimationEnd, animationType: this.props.animationType, wrapStyle: _styles.wrap, visible: this.state.visible, maskClosable: this.props.maskClosable, onClose: this.onMaskClose },
+                    { style: [_styles.modalContainer, this.props.style], maskStyle: this.props.maskStyle, animateAppear: true, onAnimationEnd: this.props.onAnimationEnd, animationType: this.props.animationType, wrapStyle: _styles.wrap, visible: this.state.visible, maskClosable: this.props.maskClosable, onClose: this.onMaskClose },
                     this.props.children
                 )
             );
@@ -109,7 +109,8 @@ exports['default'] = {
         var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
             animationType: 'slide-down',
             maskClosable: true,
-            onMaskClose: function onMaskClose() {}
+            onMaskClose: function onMaskClose() {},
+            maskStyle: null,
         };
 
         _rnTopview2['default'].set(_react2['default'].createElement(
@@ -120,7 +121,7 @@ exports['default'] = {
                     if (!visible) {
                         _rnTopview2['default'].remove();
                     }
-                }, visible: true },
+                }, visible: true, maskStyle: options.maskStyle },
             content
         ));
     },
