@@ -1,6 +1,6 @@
 # rn-global-modal
 
-modal like native
+modal like native. To show popup view contents in a way that calls a function.
 
 ## Installation
 
