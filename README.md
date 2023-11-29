@@ -32,7 +32,7 @@ render() {
   _showPop(){
       Pop.show(
           <View style={{height: 300, width: '80%', backgroundColor:'red'}}/>
-          ,{animationType: 'slide-up', maskClosable: true, onMaskClose: ()=>{}})
+          ,{animationType: 'slide-up', maskClosable: true, onMaskClose: ()=>{}, maskStyle: {opacity:0.2, backgroundColor: 'black'}})
   }
   
   // animationType fade slide-down slide-up 
